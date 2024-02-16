@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/baseline_settings_24"
+            android:title="Settings"/>
+    </group>
+
+
+    <item android:title="Management">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/delete"
+                    android:icon="@drawable/baseline_delete_outline_24"
+                    android:title="Delete &amp; Reset"/>
+                <item
+                    android:id="@+id/backup"
+                    android:icon="@drawable/baseline_save_24"
+                    android:title="Backup &amp; Restore"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Application">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/rate"
+                    android:icon="@drawable/baseline_star_outline_24"
+                    android:title="Rate MyWallet"/>
+                <item
+                    android:id="@+id/help"
+                    android:icon="@drawable/baseline_help_outline_24"
+                    android:title="Help"/>
+                <item
+                    android:id="@+id/feedback"
+                    android:icon="@drawable/baseline_feedback_24"
+                    android:title="Feedback"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

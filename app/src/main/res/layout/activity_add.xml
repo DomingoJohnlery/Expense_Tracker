@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:drawableLeft="@drawable/baseline_cancel_24"
+        android:text="Cancel"
+        android:drawableTint="@color/expenseColor"
+        android:textColor="@color/expenseColor"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:drawableLeft="@drawable/baseline_check_24"
+        android:layout_marginTop="20dp"
+        android:text="Save"
+        android:drawableTint="@color/incomeColor"
+        android:textColor="@color/incomeColor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/btnExpense"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancel">
+
+        <RadioButton
+            android:id="@+id/btnIncome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Income"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/btnExpense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expense"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            app:cornerRadius="5dp"
+            android:text="Accounts"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/black"
+            android:ems="10"
+            android:padding="0dp"
+            android:textSize="20sp"
+            android:layout_marginBottom="30dp"/>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnCategory"
+            app:cornerRadius="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:backgroundTint="@color/black"
+            android:ems="10"
+            android:text="Categories"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/singleLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints="Currency"
+        android:background="@drawable/edit_text_border"
+        android:ems="6"
+        android:gravity="end|top"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/multiLine"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="Notes"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Add Notes"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singleLine" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
